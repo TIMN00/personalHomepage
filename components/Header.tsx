@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import myHeadshot from '/images/myHeadshot.png';
+import myLinkedIn from '/images/linkedinlogo.png';
+import myGithub from '/images/GitHub-Mark.png';
 
 function Header() {
   return (
@@ -21,16 +23,26 @@ function Header() {
     <div>
   
         <div className="flex items-center space-x-1 px-10">
-        <Link href="/">
-            <p>//github</p>
+        <Link href="https://www.github.com/timn00/">
+        <Image  
+                className="rounded-full"
+                src={myGithub}
+                width={45}
+                height={45}
+                alt="github.com/timn00"
+                />
         </Link>
-        <Link href="/">
-            <p>//email</p>
+      
+        <Link href="https://linkedin.com/in/timur-niroomand/">
+        <Image  
+                className="rounded-full"
+                src={myLinkedIn}
+                width={60}
+                height={60}
+                alt="https://www.linkedin.com/in/timur-niroomand"
+                />
         </Link>
-        <Link href="/">
-            <p>//linkedin</p>
-        </Link>
-        <p>//DM/LM</p>
+       
         </div>
     </div>
     </header>

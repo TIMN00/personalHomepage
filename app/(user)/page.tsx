@@ -36,7 +36,7 @@ export default async function page() {
   return (
   <div>
       <BlogList posts={posts}/>
-      <h1>Not in preview mode.</h1>
+      <h1>©2023 Timur Niroomand </h1>
   </div>
   )
   

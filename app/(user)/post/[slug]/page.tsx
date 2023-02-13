@@ -2,6 +2,7 @@ import {groq} from "next-sanity";
 import { client } from "../../../../lib/sanity.client";
 import Image from "next/image";
 import urlFor from "../../../../lib/urlFor";
+import category from "../../../../schemas/category";
 
 type Props = {
     params: {
@@ -34,7 +35,7 @@ async function Post({params: {slug}}: Props) {
                         alt={post.author.name}
                         fill />
                     </div>
-                    <section className="p-5 bg-purple w-full">
+                    <section className="p-5 bg-[#742474] w-full">
                         <div className="flex flex-col md:flex-row justify-between gap-y-5">
                             <div>
                                 <h1 className="text-4xl font-extrabold"> {post.title} </h1>
@@ -45,6 +46,14 @@ async function Post({params: {slug}}: Props) {
                                     })}
                                 </p>
                             </div>
+                            <div>
+                                <h2 className="italic pt-10"> {post.description} </h2>
+                                <div className="flex items-center justify-end mt-auto space-x-2" > 
+                                    {post.categories.map((category) => (
+                                        <p key = {category._id} className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4">{category.title}</p>
+                                    ))}
+                                </div>
+                            </div>        
                         </div>
                     </section>
                 </div>

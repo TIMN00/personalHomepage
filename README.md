@@ -1,6 +1,6 @@
 # My Personal HomePage, Portfolio, and Blog
 
-React + NextJS 13, with a V3 Sanity IO Studio-embedded backend CMS into the app.
+React + NextJS 13, with a V3 Sanity IO Studio-embedded backend CMS into the app. To be deployed via Vercel.
 
 ### Process
 

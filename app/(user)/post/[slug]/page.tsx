@@ -3,6 +3,8 @@ import { client } from "../../../../lib/sanity.client";
 import Image from "next/image";
 import urlFor from "../../../../lib/urlFor";
 import category from "../../../../schemas/category";
+import { PortableText } from "@portabletext/react";
+import { RichTextComponents } from "../../../../components/RichTextComponents";
 
 type Props = {
     params: {
@@ -59,6 +61,9 @@ async function Post({params: {slug}}: Props) {
                 </div>
             </div>
         </section>
+        
+        <PortableText value={post.body} components = {RichTextComponents}/>
+
     </article>
 
   )
